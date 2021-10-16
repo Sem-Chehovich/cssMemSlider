@@ -3,7 +3,8 @@
   }
 
   body {
-    background: linear-gradient(3deg, #e6d16c, #16014c);
+    /* background: linear-gradient(3deg, #e6d16c, #16014c); */
+    background-color: thistle;
     background-repeat: no-repeat;
     background-size: 100%;
     display: flex;
@@ -13,22 +14,10 @@
     overflow: hidden;
   }
 
-  /* #slide1 {
-      background-image: url(./assets/1.jpeg);
-  }
-
-  #slider2 {
-    background-image: url(./assets/2.jpg);
-}
-
-#slide3 {
-    background-image: url(./assets/3.jpeg);
-}
- 
-#slide4 {
-    background-image: url(./assets/4.jpg);
-} */
   .slider__container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
     width: 99%;
     text-align: center;
     overflow: hidden;
@@ -49,6 +38,10 @@
   }
 
   .frame__item {
+      display: flex;
+      flex-direction: column;
+      align-content:space-around; 
+      align-items: flex-start;
       width: 100%;
       height: auto;
     scroll-snap-align: start;
@@ -63,15 +56,16 @@
   .buttons {
       display: inline-flex;
       justify-content: space-between;
+      background-color: thistle;
   }
 
   .link {
-    padding: 1.5rem;
+    padding: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .link span {
+  .link > span {
       width: 0.8rem;
       height: 0.8rem;
       border: 2px solid rgb(78, 78, 187);
@@ -90,4 +84,48 @@
   }
 
 
+   .content {
+       display: flex;
+       justify-content: space-between;
+       margin-top: -1.5rem;
+       z-index: 5;
+   }
+
+   .text {
+    padding-top: 2rem;
+
+   }
+
+
+
+   .text div {
+       padding: 0 10px;
+   }
+
+
+   @media (max-width: 640px) {
+       .slider__container {
+        margin: 18%;
+        position: relative;
+       }
+
+       .link > span {
+        width: 1.8rem;
+        height: 1.8rem;
+        }
+        .text {
+            padding-top: 7rem;
+            font-size: 2rem;
+        }
+
+        .content {
+            position: relative;
+            top: -6rem;
+            left: -7rem;
+        }
+
+        .frame__item {
+            align-items: center
+        }
+    }
 
