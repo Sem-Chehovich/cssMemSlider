@@ -103,9 +103,9 @@
    }
 
 
-   @media (max-width: 640px) {
+   @media (max-width: 340px) {
        .slider__container {
-        margin: 18%;
+        margin: 4%;
         position: relative;
        }
 
@@ -121,7 +121,7 @@
         .content {
             position: relative;
             top: -6rem;
-            left: -7rem;
+            left: -3rem;
         }
 
         .frame__item {
