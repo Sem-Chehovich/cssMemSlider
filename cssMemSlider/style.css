@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+  }
+
+  body {
+    /* background: linear-gradient(3deg, #e6d16c, #16014c); */
+    background-color: thistle;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 99vh;
+    overflow: hidden;
+  }
+
+  .slider__container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    width: 99%;
+    text-align: center;
+    overflow: hidden;
+    margin: 35%;
+  }
+
+  .frame__item img {
+      width: 100%;
+      max-height: 26rem;
+  }
+
+  .frame {
+    display: flex;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .frame__item {
+      display: flex;
+      flex-direction: column;
+      align-content:space-around; 
+      align-items: flex-start;
+      width: 100%;
+      height: auto;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+    background-position: center;
+  }
+
+  .buttons {
+      display: inline-flex;
+      justify-content: space-between;
+      background-color: thistle;
+  }
+
+  .link {
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .link > span {
+      width: 0.8rem;
+      height: 0.8rem;
+      border: 2px solid rgb(78, 78, 187);
+      border-radius: 50%;
+      background-color: rgb(78, 78, 187);
+      transition: all 0.4s;
+  }
+
+  .link:hover span {
+      background-color: rgba(245, 245, 245, 0.719);
+      border-color: rgba(245, 245, 245, 0.719);;
+  }
+
+  .link:focus span {
+    background-color: rgba(99, 99, 99, 0.801);
+  }
+
+
+   .content {
+       display: flex;
+       justify-content: space-between;
+       margin-top: -1.5rem;
+       z-index: 5;
+   }
+
+   .text {
+    padding-top: 2rem;
+
+   }
+
+
+
+   .text div {
+       padding: 0 10px;
+   }
+
+
+   @media (max-width: 340px) {
+       .slider__container {
+        margin: 4%;
+        position: relative;
+       }
+
+       .link > span {
+        width: 1.8rem;
+        height: 1.8rem;
+        }
+        .text {
+            padding-top: 7rem;
+            font-size: 2rem;
+        }
+
+        .content {
+            position: relative;
+            top: -6rem;
+            left: -3rem;
+        }
+
+        .frame__item {
+            align-items: center
+        }
+    }
+
